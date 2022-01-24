@@ -26,7 +26,7 @@
     {
         "name": "Dexter",
         "age": "1 year",
-        "weight": 9,
+        "weight": "",
         "bio": "Treats and Snoozin!",
         "filename": "dexter.png",
         "breed": "Bulldog"
