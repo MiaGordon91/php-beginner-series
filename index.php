@@ -1,3 +1,52 @@
+<?php
+
+$petsJson = file_get_contents('./resources/pets.json');
+$pets = json_decode($petsJson, true);
+
+$pet1 = array(
+    'name' => 'Dior',
+    'age' => '3 years',
+    'breed' => 'Dalmatian',
+    'weight' => 9,
+    'bio' => 'Loves to sleep',
+    'filename' => 'pet1.png'
+);
+
+$pet2 = array(
+    'name' => 'Rex',
+    'age' => '3 years',
+    'breed' => 'Cockapoo',
+    'weight' => 9,
+    'bio' => 'Loves to sleep',
+    'filename' => 'pet2.png'
+);
+
+$pet3 = array(
+    'name' => 'Cookie',
+    'age' => '3 years',
+    'breed' => 'Pug',
+    'weight' => 9,
+    'bio' => 'Loves to sleep',
+    'filename' => 'pet3.png'
+);
+
+$dexter = array(
+    'name' => 'Dexter',
+    'age' => '3 years',
+    'breed' => 'Pug',
+    'weight' => 9,
+    'bio' => 'Loves to sleep',
+    'filename' => 'pet3.png'
+);
+
+
+$pets = array($pet1, $pet2, $pet3, $dexter);
+    var_dump($pets);die();
+
+$message = 'All the love, none of the crap!';
+$pupCount = count($pets);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,8 +114,8 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h1>Hello, world!</h1>
-
+            <h1><?php echo $message ?> </h1>
+            <h2>We have <?php echo $pupCount ?> pups friends! </h2>
             <p>This is a template for a simple marketing or informational website. It includes a large callout called the
                 hero unit and three supporting pieces of content. Use it as a starting point to create something more
                 unique.</p>
@@ -75,40 +124,35 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                    euismod. Donec sed odio dui. </p>
+        <div class="container">
+            <div class="row">
+                <?php foreach ($pets as $pet) { ?>
+                 <div class="col-md-4 pet-list-item">
+                    <h2><?php echo $pet['name']; ?></h2>
 
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+                    <img src="/images/<?php echo $pet['filename']; ?>" class="img-rounded"/>
+
+                    <blockquote class="pet_info">
+                        <span class="label label-info"><?php echo $pet['breed']; ?> </span>
+                        <br>
+                        <?php echo $pet['age']; ?>
+                        <?php echo $pet['weight']; ?> lbs
+                    </blockquote>
+
+                    <p> 
+                    <?php echo $pet['bio']; ?> 
+                    </p>
+
+                    </div>
+                    <?php } ?>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                    euismod. Donec sed odio dui. </p>
-
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                    porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                    fermentum massa justo sit amet risus.</p>
-
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-        </div>
-
         <hr>
 
-        <footer>
+
+
+
+                <footer>
             <p>&copy; AirPupNMeow.com</p>
         </footer>
     </div>

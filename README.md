@@ -11,3 +11,8 @@ Progress will be posted to this repository as we work. If you'd like to contribu
 either open up an issue or (even better) fork the code and create a pull
 request. We want to create the best PHP tutorial for beginners, a job that's
 best solved by as many people as possible :).
+
+
+
+
+To run local host: php -S localhost:8000
