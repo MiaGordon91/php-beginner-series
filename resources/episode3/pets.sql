@@ -18,4 +18,4 @@ INSERT INTO `pet`
 INSERT INTO `pet`
     (`id`, `name`, `breed`, `age`, `weight`, `bio`, `image`)
     VALUES
-    (4, 'Pancake', 'Bulldog', '1 year', 9, 'Treats and Snoozin!', 'pancake.png');
+    (4, 'Pancake', 'Bulldog', '1 year', 9, 'Treats and Snoozin!', 'dexter.png');

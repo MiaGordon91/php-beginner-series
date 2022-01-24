@@ -24,11 +24,11 @@
         "filename": "pet3.png"
     },
     {
-        "name": "Pancake",
+        "name": "Dexter",
         "age": "1 year",
         "weight": 9,
         "bio": "Treats and Snoozin!",
-        "filename": "pancake.png",
+        "filename": "dexter.png",
         "breed": "Bulldog"
     }
 ]
