@@ -9,8 +9,6 @@ $pupCount = count($pets);
 ?>
 
 
-
-
     <div class="jumbotron">
         <div class="container">
             <h1><?php echo $message ?> </h1>

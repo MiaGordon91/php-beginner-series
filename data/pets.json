@@ -30,5 +30,22 @@
         "bio": "Treats and Snoozin!",
         "filename": "dexter.png",
         "breed": "Bulldog"
+    },
+    {
+        "name": "Sooty",
+        "breed": "Poodle",
+        "age": "5",
+        "weight": "60",
+        "bio": "Very cute!",
+        "filename": ""
+    },
+    {
+        "name": "Coco",
+        "breed": "Labrador",
+        "age": "2",
+        "weight": "80",
+        "bio": "Loves to eat!",
+        "filename": ""
     }
+
 ]
